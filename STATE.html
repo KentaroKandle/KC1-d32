@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>STATE.html</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="generator" content="SynEdit HTML exporter" />
+<style type="text/css">
+<!--
+body { color: #000000; background-color: #000080; }
+.cpp1-assembler { color: #00FF00; }
+.cpp1-character { color: #FFFF00; }
+.cpp1-comment { color: #C0C0C0; }
+.cpp1-float { color: #FFFF00; }
+.cpp1-hexadecimal { color: #FFFF00; }
+.cpp1-identifier { color: #FFFF00; }
+.cpp1-illegalchar { color: #FFFF00; }
+.cpp1-number { color: #FFFF00; }
+.cpp1-octal { color: #FFFF00; }
+.cpp1-preprocessor { color: #FFFF00; }
+.cpp1-reservedword { color: #FFFFFF; }
+.cpp1-space { background-color: #000080; color: #FFFF00; }
+.cpp1-string { color: #FFFF00; }
+.cpp1-symbol { color: #FFFF00; }
+-->
+</style>
+</head>
+<body>
+<pre>
+<code><span style="font: 10pt Consolas;"><span class="cpp1-comment">/* state.cpp -- Ability to save and reload the current game's &quot;state&quot;
+** similar to the snapshot or savestate for emulators and whatnot, 
+** as opposed to a savefile or a record of the game (as in KCSN notation,
+** similar to a Chess game's record). */
+
+
+</span><span class="cpp1-preprocessor">#include &quot;state.hpp&quot;
+
+</span><span class="cpp1-comment">/*
+struct SaveState {
+	string fn = &quot;snapfile.txt&quot;;
+	
+	int open(
+		//string fn=&quot;snap0001.txt&quot;
+		);
+	int close()	; 
+	
+	int dump();
+	
+	// private 
+	
+	int record_side();
+	int record_turn();
+	int record_state();
+	int record_go(); // typically used, game still going.
+	int record_end(); // only used if in end-state
+	
+};
+*/
+
+</span><span class="cpp1-reservedword">static</span><span class="cpp1-space"> ofstream* output_file = null;
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> SaveState::open() {
+	</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> nErr = 0;
+	ofstream out(fn);
+	
+	</span><span class="cpp1-comment">// check for errors TODO 
+</span><span class="cpp1-space">	
+	
+	
+	out &lt;&lt; &quot;REM save state, KCSN v0.0.0, blah blah,&quot; &lt;&lt; endl
+	&lt;&lt; &quot;REM fuck C++ the Advanced Asshole of Asuran contra-human conspiracy....&quot;
+	&lt;&lt; endl;
+	
+	output_file = out;
+	
+	</span><span class="cpp1-reservedword">if</span><span class="cpp1-space"> out.bad() 
+		nErr++;
+	
+	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> nErr;
+}
+
+</span><span class="cpp1-reservedword">int</span><span class="cpp1-space"> SaveState::close() {
+	output_file-&gt;close();
+	</span><span class="cpp1-reservedword">return</span><span class="cpp1-space"> 0; </span><span class="cpp1-comment">// TODO: check .bad() and stuff
+</span><span class="cpp1-symbol">} 
+
+
+</span></span>
+</code></pre>
+</body>
+</html>
