@@ -1,4 +1,4 @@
-#define build_string "KC v1.0.8,\"Pi Thrusting!\""
+#define build_string "KC v1.0.9,\"Xi Throwing!\""
 
 #define BoardSize 8
 
