@@ -23,3 +23,24 @@ within the Inner Area.
 More details later, and gameplay would be streamlined as well.
 
 Next major step is to log the games so that they can be replayed / viewed as records.
+
+To Run the Program:
+
+DOSBOX with CWSDPMI is what I use, 
+you might have luck under similar configurations.
+
+CWSDPMI is needed to run 32-bit DPMI code under DOS.
+
+
+To Build:
+
+I used the latest build of DJGPP, under DOSBOX.
+
+However, my config was tweaked and DJGPP comes in many parts, so,
+each setup is different.
+
+I also used latest DOS-compatible build of Allegro. 
+
+Rather than port it, I'll just hire a team 
+(time is money, cash is distraction from wealth actual)
+to help me remake it in Python/Pygame.
