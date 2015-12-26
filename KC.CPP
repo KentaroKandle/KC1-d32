@@ -235,12 +235,16 @@ dout("Initialising...\n");
   strcpy(buf, "SFCHAR.DAT");
   if (exists(buf)) {
       data = load_datafile(buf);
-  } else {
+  }
+/*      
+   else {
     strcpy(buf, "/BUILT/SFCHAR.DAT");
     if (exists(buf)) {
       data = load_datafile(buf);
-  } else {
-  
+  } 
+*/
+  else {
+ 
 	  /* another option : try the internal data file.
 	  Not Yet Implemented (tm) */
       dout("\n\t\tAck!!!\n\tDid not find required datafile!\n\n");
