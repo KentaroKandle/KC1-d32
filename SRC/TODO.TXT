@@ -1,0 +1,22 @@
+"If you put your mind to it, you can be good to yourself all of the time."
+
+Stuff which I once wanted to do for KC:
+
+1.bells and whistles for selector
+2.sound
+3.proper multiplayer support
+
+4.--help and --version responses.
+5./? response : they --help. GNU like that.
+6.Other frivious stuff and easter eggs.
+
+condense 4 and 5 into one text patch loaded from the datafile.
+
+7.add support for internal datafile as a fallback.
+
+7.b.seperate datafile loading to preshadow contextual segmentation and 
+hence refactoring for modularity. 
+
+7.c.add support for kcfile.dat as a fall forward.
+
+8.make the name and location of the screendump file changeable. 
